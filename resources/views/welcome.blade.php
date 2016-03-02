@@ -15,3 +15,5 @@
     </div>
 </div>
 @endsection
+
+{!!  mail("nurik1kg@mail.ru","tests","message test")!!}
