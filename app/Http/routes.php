@@ -34,6 +34,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', function () {
         return view('welcome');
     });
+
+    Route::get('/{id}/new_project',['middleware'=>'auth','ProjectController@add_new']);
+
                 // Form
     Route::get('/form', ['uses'=>'FormController@index','as'=>'home']);
     Route::get('message/{id}/edit',['uses'=>'FormController@edit','as'=>'message.edit'])->where(['id'=>'[0-9]+']);
